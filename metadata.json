@@ -1,0 +1,5 @@
+{
+  "name": "Binance Alpha Monitor",
+  "description": "Real-time monitoring of Alpha tokens on Binance with holder analytics and price trend sparklines.",
+  "requestFramePermissions": []
+}
