@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { RefreshCw, Search, ArrowUp, ArrowDown, TrendingUp, BarChart2, Clock, Info, Settings, Filter, Eye, ChevronDown } from 'lucide-react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { RefreshCw, Search, ArrowUp, ArrowDown, TrendingUp, BarChart2, Clock, Info, Eye, ChevronDown } from 'lucide-react';
 import { AlphaToken, TokenHistoryMap, SortField, SortDirection, HistoryPoint } from './types';
 import { fetchAlphaTokens } from './services/api';
 import Sparkline from './components/Sparkline';
