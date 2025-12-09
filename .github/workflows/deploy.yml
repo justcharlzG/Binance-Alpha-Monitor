@@ -24,11 +24,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm' # 启用 npm 缓存，加速后续构建
+          # cache: 'npm'  <-- 移除此行。因为如果没有 package-lock.json，开启缓存会导致 Workflow 报错失败。
 
       # 3. 安装依赖
       - name: Install dependencies (安装依赖)
-        run: npm ci # 使用 ci 命令进行更严格、干净的安装
+        # 改用 npm install。
+        # npm ci 必须要有 package-lock.json 才能运行，而 npm install 可以只依赖 package.json。
+        run: npm install
 
       # 4. 执行构建
       - name: Build project (编译打包)
